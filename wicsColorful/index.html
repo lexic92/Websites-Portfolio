@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>BYU Women in Computer Science</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="js/jquery-easing-1.3.pack.js"></script>
+		<script type="text/javascript" src="js/jquery-easing-compatibility.1.2.pack.js"></script>
+		<script type="text/javascript" src="js/coda-slider.1.1.1.pack.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				goHome();
+			});
+			
+			function goHome(){
+				$(".menu").removeClass("active");
+				$("#homeMenu").addClass("active");
+				$.ajax({url:"home.html", 
+						success:function(result){
+							$("#content").html(result);
+						}
+				});
+			}
+			function goResources(){
+				$(".menu").removeClass("active");
+				$("#resourcesMenu").addClass("active");
+				$.ajax({url:"resources.html", 
+						success:function(result){
+							$("#content").html(result);
+						}
+				});
+			}
+			function goEvents(){
+				$(".menu").removeClass("active");
+				$("#eventsMenu").addClass("active");
+				$.ajax({url:"events.html", 
+						success:function(result){
+							$("#content").html(result);
+						}
+				});
+			}
+			function goContact(){
+				$(".menu").removeClass("active");
+				$("#contactMenu").addClass("active");
+				$.ajax({url:"contact.html", 
+						success:function(result){
+							$("#content").html(result);
+						}
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="nav">
+			<h2 id="sitename"></h2>
+		</div>
+		<div id="wrap">
+			<div id="header">
+				<h2 id="desc"></h2>
+			</div>
+			<div id="topbar">
+				<ul class="breadcrumb">
+					<li id="homeMenu" class="menu active"><a onclick="goHome()">Home</a> &raquo;</li>
+					<li id="resourcesMenu" class="menu"><a onclick="goResources()">Resources</a> &raquo;</li>
+					<li id="eventsMenu" class="menu"><a onclick="goEvents()" >Events</a> &raquo;</li>
+					<li id="contactMenu" class="menu"><a onclick="goContact()">Contact</a> </li>
+				</ul>
+			</div>
+			<br>
+
+			<div id="content" class="post">
+			</div>
+
+			<div class="clear">
+			</div>  
+
+			<div id="footerlinks">
+				<ul id="footernav">
+					<li><a onclick="goHome()">Home</a> &raquo;</li>
+					<li><a onclick="goResources()">Resources</a> &raquo;</li>
+					<li><a onclick="goEvents()">Events</a> &raquo;</li>
+					<li><a onclick="goContact()">Contact</a> </li>
+				</ul>
+			</div>
+			<div id="bottom">
+
+			<p>Copyright | 2012 | BYU Women in Computer Science</p>
+			 
+			<!-- Removing this link back to Ramblingsoul.com will be violation of the Creative Commons Attribution 3.0 Unported License, under which this template is released for download -->
+			<a href="http://ramblingsoul.com" title="Download High Quality CSS Layouts">CSS Layout</a> by RamblingSoul.com
+			<!-- Copyright - Ramblingsoul.com -->
+			</div>
+		</div>
+		<br><br>
+	
+	</body>
+</html>
